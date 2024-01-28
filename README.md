@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/thecaprisun/dotfiles/assets/156376854/abe51f92-b3df-48e5-9448-9dadf197bd85)# Dotfiles
+# Dotfiles
 
 This contains my dotfiles. They are for alacritty, i3, nvim, and a few other programs.
 
