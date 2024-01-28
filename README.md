@@ -7,8 +7,7 @@ This contains my dotfiles. They are for alacritty, i3, nvim, and a few other pro
 ![image](https://github.com/thecaprisun/dotfiles/assets/156376854/f3a98f75-35e9-4eac-9fd8-07e8331b17cd)
 ![image](https://github.com/thecaprisun/dotfiles/assets/156376854/293f826e-1b6f-41fe-b08a-61f402309e7a)
 
-This is my NVIM config. It's not finished yet, I haven't managed to enable nvim-cmp yet, i haven't managed to make the status bar not show in some pages, but i'm constantly working on this, so expect this to get 
-a lot of edits.
+This is my NVIM config. It's not finished yet, I haven't managed to enable nvim-cmp yet, i haven't managed to make the status bar not show in some pages, but i'm constantly working on this, so expect this to get a lot of edits.
 
 ## Alacritty
 
