@@ -135,7 +135,7 @@ require("ibl").setup()
 require("tokyonight").setup({
   style = "moon", 
   light_style = "day",
-  transparent = false,
+  transparent = true,
   terminal_colors = true, 
   styles = {
     comments = { italic = true },
@@ -161,6 +161,7 @@ require("treesitter-config")
 
 --add vim.cmd stuff here
 
+vim.cmd("colorscheme tokyonight-moon")
 vim.cmd("set expandtab")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
