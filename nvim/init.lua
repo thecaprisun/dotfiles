@@ -17,12 +17,12 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
  
   { 
-   "folke/tokyonight.nvim",
-   name = "tokyonight",
+   "catppuccin/nvim",
+   name = "catppuccin",
    priority = 1000,
    init = function()
      vim.opt.termguicolors = true
-     vim.cmd("colorscheme tokyonight")
+     vim.cmd("colorscheme catppuccin")
    end, 
  },
 
@@ -80,7 +80,7 @@ local plugins = {
 
  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
-  { 'itchyny/lightline.vim'}
+ { "famiu/feline.nvim", lazy = true },
 
 } --End of plugins to install
 
@@ -94,8 +94,54 @@ local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<C-f>', builtin.find_files, {})
 vim.keymap.set('n', '<C-S-p>', builtin.live_grep, {})
 
-require("tokyonight").setup()
-vim.cmd.colorscheme="tokyonight"
+require("catppuccin").setup({
+    flavour = "frappe", -- latte, frappe, macchiato, mocha
+    background = { -- :h background
+        light = "latte",
+        dark = "frappe",
+    },
+    transparent_background = true, -- disables setting the background color.
+    show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
+    term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+    dim_inactive = {
+        enabled = true, -- dims the background color of inactive window
+        shade = "dark",
+        percentage = 0.15, -- percentage of the shade to apply to the inactive window
+    },
+    no_italic = false, -- Force no italic
+    no_bold = false, -- Force no bold
+    no_underline = false, -- Force no underline
+    styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+        comments = { "italic" }, -- Change the style of comments
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+    },
+    color_overrides = {},
+    custom_highlights = {},
+    integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        treesitter = true,
+        notify = false,
+        mini = {
+            enabled = true,
+            indentscope_color = "",
+        },
+        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+    },
+})
+
+vim.cmd.colorscheme="catppuccin"
 
 require("noice").setup({
   lsp = {
@@ -132,36 +178,20 @@ require("nvim-tree").setup({
 
 require("ibl").setup()
 
-require("tokyonight").setup({
-  style = "moon", 
-  light_style = "day",
-  transparent = true,
-  terminal_colors = true, 
-  styles = {
-    comments = { italic = true },
-    keywords = { italic = true },
-    functions = {},
-    variables = {},
-    sidebars = "dark", 
-      floats = "dark",
-  },
-  sidebars = { "qf", "help" }, 
-  day_brightness = 0.3, 
-  hide_inactive_statusline = false, 
-  dim_inactive = false, 
-  lualine_bold = false,
-  on_colors = function(colors) end,
-  on_highlights = function(highlights, colors) end,
-})
-
 require("alpha-config")
 require("treesitter-config")
+
+
+local ctp_feline = require('catppuccin.groups.integrations.feline')
+
+require("feline").setup({
+    components = ctp_feline.get(),
+})
 
 --other configuration that doesn't use require
 
 --add vim.cmd stuff here
 
-vim.cmd("colorscheme tokyonight-moon")
 vim.cmd("set expandtab")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")

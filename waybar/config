@@ -1,8 +1,8 @@
 {
   "layer": "top",
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": [],
-    "modules-right": ["backlight", "pulseaudio", "battery"],
+    "modules-left": ["battery"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["backlight", "pulseaudio"],
     "custom/arch": {
       "format": "  ",
       "tooltip": false,
@@ -14,7 +14,7 @@
       "tooltip": false,
       "all-outputs": true,
       "format-icons": {
-        "active": "",
+        "active": "",
         "default": ""
       }
     },
@@ -23,11 +23,11 @@
     },
     "backlight": {
       "device": "intel_backlight",
-      "format": "<span color='#b4befe'>{icon}</span> {percent}%",
+      "format": "<span color='#000000'>{icon}</span> {percent}%",
       "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "pulseaudio": {
-      "format": "<span color='#b4befe'>{icon}</span> {volume}%",
+      "format": "<span color='#000000'>{icon}</span> {volume}%",
       "format-muted": " ",
       "tooltip": false,
       "format-icons": {
@@ -52,9 +52,9 @@
       "tooltip": false,
     },
     "battery": {
-      "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
+      "format": "<span color='#000000'>{icon}</span> {capacity}%",
       "format-icons": ["󰁺", "󰁼", "󰁽", "󰁽", "󰁿", "󰂀", "󰂀", "󰂁", "󰂁", "󰁹"],
-      "format-charging": "<span color='#b4befe'>󰂄</span> {capacity}%",
+      "format-charging": "<span color='#000000'>󰂄</span> {capacity}%",
       "tooltip": false,
     },
 }

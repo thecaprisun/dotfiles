@@ -7,13 +7,13 @@
 }
 
 window#waybar {
-  background: #11111b;
+  background: transparent;
 }
 
 #custom-arch, #workspaces {
   border-radius: 10px;
-  background-color: #11111b;
-  color: #b4befe;
+  background-color: transparent;
+  color: #000000;
   margin-top: 5px;
   margin-right: 15px;
   padding-top: 1px;
@@ -24,22 +24,22 @@ window#waybar {
 #custom-arch {
   font-size: 20px;
   margin-left: 15px;
-  color: #b4befe;
+  color: #000000;
 }
 
 #workspaces button {
-  background: #11111b;
-  color: #b4befe;
+  background: transparent;
+  color: #000000;
 }
 
 #clock, #backlight, #pulseaudio, #bluetooth, #network, #battery{
   border-radius: 10px;
-  background-color: #11111b;
-  color: #cdd6f4;
+  background-color: transparent;
+  color: #000000;
   margin-top: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-right: 15px;
+  margin-right: 5px;
 }
 
 #backlight, #bluetooth {
