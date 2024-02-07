@@ -1,13 +1,13 @@
 # Dotfiles
 
-This contains my dotfiles. They are for alacritty, i3, nvim, and a few other programs.
+This contains my dotfiles. They are for alacritty, i3, nvim, hyprland and waybar.
 
 ## NVIM
 
-![image](https://github.com/thecaprisun/dotfiles/assets/156376854/f3a98f75-35e9-4eac-9fd8-07e8331b17cd)
-![image](https://github.com/thecaprisun/dotfiles/assets/156376854/293f826e-1b6f-41fe-b08a-61f402309e7a)
+![image](https://github.com/thecaprisun/dotfiles/assets/156376854/5e2d8e49-6cbd-4d76-9892-6b2182e9e3f0)
+![image](https://github.com/thecaprisun/dotfiles/assets/156376854/143f8964-45d8-4bc8-bc96-f4f88e91da1f)
 
-This is my NVIM config. It's not finished yet, I haven't managed to enable nvim-cmp yet, i haven't managed to make the status bar not show in some pages, but i'm constantly working on this, so expect this to get a lot of edits.
+This is my NVIM config. It's not finished yet, but i'm constantly working on this, so expect this to get a lot of edits.
 
 ## Alacritty
 
@@ -27,3 +27,15 @@ This is my i3 configuration.  I'm not using i3 right now, so don't expect it to 
 ![Screenshot](https://github.com/thecaprisun/dotfiles/assets/156376854/72fd4168-7d6c-448d-867a-1ad23723911d)
 
 This is my polybar. I've made a flat look, with just 2 colors. Same as i3 though, don't expect frequent updates.
+
+## Waybar
+
+![image](https://github.com/thecaprisun/dotfiles/assets/156376854/2bafc31f-eac9-4d2b-9f7c-8a4fc593f085)
+
+Waybar. I'm constantly working on this.
+
+## Hyprland
+
+![image](https://github.com/thecaprisun/dotfiles/assets/156376854/f470b980-4e2d-49be-bd5c-642a959c2184)
+
+Nothing special, Hyprland is relatively easy to configure compared to some other stuff here.
