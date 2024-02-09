@@ -1,8 +1,8 @@
 {
   "layer": "top",
-    "modules-left": ["battery"],
-    "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["backlight", "pulseaudio"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["backlight", "pulseaudio", "battery"],
     "custom/arch": {
       "format": "  ",
       "tooltip": false,
@@ -18,20 +18,25 @@
         "default": ""
       }
     },
-    "clock": {
-      "format": "<span color='#b4befe'> </span>{:%H:%M}",
+
+
+    "custom/clock": {
+       "exec": "date +'%d. %b %H:%M:%S'",
+        "interval": 1
     },
+
+
     "backlight": {
       "device": "intel_backlight",
-      "format": "<span color='#000000'>{icon}</span> {percent}%",
+      "format": "<span color='#FFFFFF'>{icon}</span> {percent}%",
       "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "pulseaudio": {
-      "format": "<span color='#000000'>{icon}</span> {volume}%",
+      "format": "<span color='#FFFFFF'>{icon}</span> {volume}%",
       "format-muted": " ",
       "tooltip": false,
       "format-icons": {
-        "headphone": "",
+        "headphone": " ",
         "default": [" ", " ", "󰕾 ", "󰕾 ", "󰕾 ", " ", " ", " "]
       },
       "scroll-step": 1,
@@ -52,9 +57,9 @@
       "tooltip": false,
     },
     "battery": {
-      "format": "<span color='#000000'>{icon}</span> {capacity}%",
+      "format": "<span color='#FFFFFF'>{icon}</span> {capacity}%",
       "format-icons": ["󰁺", "󰁼", "󰁽", "󰁽", "󰁿", "󰂀", "󰂀", "󰂁", "󰂁", "󰁹"],
-      "format-charging": "<span color='#000000'>󰂄</span> {capacity}%",
+      "format-charging": "<span color='#FFFFFF'>󰂄</span> {capacity}%",
       "tooltip": false,
     },
 }

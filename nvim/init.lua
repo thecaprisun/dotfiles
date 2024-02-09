@@ -60,23 +60,18 @@ local plugins = {
     version = '^1.0.0', 
  },
 
- {
-  'nvim-tree/nvim-tree.lua',
-  lazy = true,
-  dependencies = {
-      'nvim-tree/nvim-web-devicons',
-     },
- },
-
- {'hrsh7th/nvim-cmp',
-  dependencies = {
-  'neovim/nvim-lspconfig',
-  'hrsh7th/cmp-nvim-lsp',
-  'hrsh7th/cmp-buffer',
-  'hrsh7th/cmp-path',
-  'hrsh7th/cmp-cmdline',
+ { "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", 
+      "MunifTanjim/nui.nvim",
+      "3rd/image.nvim", 
     },
  },
+
+ {"neoclide/coc.nvim", lazy = true },
+
 
  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
@@ -128,9 +123,11 @@ require("catppuccin").setup({
     color_overrides = {},
     custom_highlights = {},
     integrations = {
+        coc_nvim = true,
         cmp = true,
         gitsigns = true,
-        nvimtree = true,
+        -- nvimtree = true,
+        neotree = true,
         treesitter = true,
         notify = false,
         mini = {
@@ -160,23 +157,8 @@ require("noice").setup({
   },
 })
 
-require("nvim-tree").setup({
-
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-})
-
 require("ibl").setup()
+--require("coc.nvim").setup()
 
 require("alpha-config")
 require("treesitter-config")
@@ -198,5 +180,7 @@ vim.cmd("set shiftwidth=2")
 vim.g.mapleader = " "
 vim.opt.termguicolors = true
 vim.cmd("set cursorline")
-vim.cmd("nnoremap <C-t> :NvimTreeToggle<CR>")
+vim.cmd("nnoremap <C-t> :Neotree<CR>")
 vim.cmd("nnoremap q :q<CR>")
+vim.cmd("nnoremap <C-z> :undo<CR>")
+vim.cmd("nnoremap <C-y> :redo<CR>")

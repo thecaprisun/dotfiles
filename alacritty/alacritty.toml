@@ -6,11 +6,11 @@ family = "FiraCode Nerd Font"
 style = "Regular"
 
 [window]
-opacity = 1
+opacity = 0.6
 
 [window.padding]
-x = 30
-y = 30
+x = 10
+y = 10
 
 [shell]
 program = "/usr/bin/zsh"
