@@ -1,6 +1,6 @@
 # Dotfiles
 
-This contains my dotfiles. They are for alacritty, i3, nvim, hyprland and waybar.
+This contains my dotfiles. They are for alacritty, i3, nvim, hyprland, waybar, dunst and tofi.
 
 ## NVIM
 
@@ -11,9 +11,9 @@ This is my NVIM config. It's not finished yet, but i'm constantly working on thi
 
 ## Alacritty
 
-![image](https://github.com/thecaprisun/dotfiles/assets/156376854/71b73960-de7a-4815-aaab-98dca9bc1f2a)
+![image](https://github.com/thecaprisun/dotfiles/assets/156376854/045e9626-0e4a-464f-9759-c6334cb87876)
 
-My Alacritty config is nothing special, just sharing it here because I need a place to keep it. In the screenshot I'm using zsh with p10k.
+My Alacritty config is nothing special, just sharing it here because I need a place to keep it. In the screenshot I'm using zsh with starship gruvbox rainbow.
 
 ## i3
 
@@ -30,12 +30,18 @@ This is my polybar. I've made a flat look, with just 2 colors. Same as i3 though
 
 ## Waybar
 
-![image](https://github.com/thecaprisun/dotfiles/assets/156376854/2bafc31f-eac9-4d2b-9f7c-8a4fc593f085)
+![image](https://github.com/thecaprisun/dotfiles/assets/156376854/e7106936-428d-45fa-a273-348aa7255f95)
 
 Waybar. I'm constantly working on this.
 
 ## Hyprland
 
-![image](https://github.com/thecaprisun/dotfiles/assets/156376854/f470b980-4e2d-49be-bd5c-642a959c2184)
+![image](https://github.com/thecaprisun/dotfiles/assets/156376854/68f4ac73-b15d-4c05-a3b7-51d20f457ab4)
 
 Nothing special, Hyprland is relatively easy to configure compared to some other stuff here.
+
+## Tofi
+
+![image](https://github.com/thecaprisun/dotfiles/assets/156376854/c8654db3-0a6b-49d9-90d6-194653a068d9)
+
+Might recive edits here and there
