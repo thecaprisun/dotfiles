@@ -15,6 +15,8 @@ alias .="sudo pacman -S"
 alias dots="sh ~/scripts/dotfiles.sh" 
 alias irc="irssi"
 alias cp="cp -r"
+alias steamos="steam -steamos3 -steamdeck -gamepadui"
+alias acm0="sudo chmod a+rw /dev/ttyACM0"
 
 PROMPT='%/> '
 
