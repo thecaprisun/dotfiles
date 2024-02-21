@@ -17,14 +17,13 @@ My Alacritty config is nothing special, just sharing it here because I need a pl
 
 ## i3
 
-![Screenshot](https://github.com/thecaprisun/dotfiles/assets/156376854/7de622d9-a99a-4e49-a60a-c047c1d1bca2)
-![Screenshot](https://github.com/thecaprisun/dotfiles/assets/156376854/a212f417-6587-4b01-abed-49926e591e7c)
+![2024-02-11_14-30](https://github.com/thecaprisun/dotfiles/assets/156376854/bc5abbad-9a22-47fc-8503-13fdd0bc52b6)
 
-This is my i3 configuration.  I'm not using i3 right now, so don't expect it to be updated frequently.
+This is my i3 configuration. Daily driving it right now. Edits may be frequent.
 
 ## Polybar
 
-![Screenshot](https://github.com/thecaprisun/dotfiles/assets/156376854/72fd4168-7d6c-448d-867a-1ad23723911d)
+![2024-02-11_14-30](https://github.com/thecaprisun/dotfiles/assets/156376854/c0bc0466-1fac-4091-ac9e-683080bc66b7)
 
 This is my polybar. I've made a flat look, with just 2 colors. Same as i3 though, don't expect frequent updates.
 
@@ -32,7 +31,7 @@ This is my polybar. I've made a flat look, with just 2 colors. Same as i3 though
 
 ![image](https://github.com/thecaprisun/dotfiles/assets/156376854/e7106936-428d-45fa-a273-348aa7255f95)
 
-Waybar. I'm constantly working on this.
+Waybar. Not using this often
 
 ## Hyprland
 
@@ -45,3 +44,14 @@ Nothing special, Hyprland is relatively easy to configure compared to some other
 ![image](https://github.com/thecaprisun/dotfiles/assets/156376854/c8654db3-0a6b-49d9-90d6-194653a068d9)
 
 Might recive edits here and there
+
+## Rofi
+
+![2024-02-11_14-30](https://github.com/thecaprisun/dotfiles/assets/156376854/e6c7806a-f60f-48d7-bffc-130c6a22181c)
+![2024-02-11_14-30](https://github.com/thecaprisun/dotfiles/assets/156376854/bacb3509-35f8-4b30-8f64-1785dada67d6)
+
+Edits won't be frequent, I might add  more modes.
+
+## Compfy
+
+It adds  blur and fancy animations.
