@@ -123,6 +123,7 @@ mode "resize" {
 # gaps outer 20
 
 bindsym Mod1+Tab exec "rofi -show window"
+# bindsym $mod+e exec "rofi -show filebrowser"
 
 bindsym $mod+r mode "resize"
 
