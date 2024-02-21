@@ -1,6 +1,10 @@
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
+source ~/antigen.zsh
+antigen bundle zsh-users/zsh-autosuggestions
+antigen apply
+
 zstyle ':vcs_info:git:*' formats '%b '
 alias config="cd ~/.config && lsd"
 alias server="sh ~/scripts/server-sshfs.sh" 
@@ -17,8 +21,11 @@ alias irc="irssi"
 alias cp="cp -r"
 alias steamos="steam -steamos3 -steamdeck -gamepadui"
 alias acm0="sudo chmod a+rw /dev/ttyACM0"
+alias p="sudo pacman"
+alias n="nvim"
+alias N="sudo nvim"
 
-PROMPT='%/> '
+PROMPT='> '
 
 EDITOR=nvim
 

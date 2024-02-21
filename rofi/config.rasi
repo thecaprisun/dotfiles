@@ -1,0 +1,130 @@
+configuration {
+  display-drun: "Applications";
+  display-window: "Windows";
+  drun-display-format: "{icon} {name}";
+  show-icons: true;
+}
+
+
+
+* {
+  bg: #11121D;
+
+  bbg: #1E1E28;
+
+  fg: #FFFFFF;
+
+  se: #11121D;
+}
+window {
+    background-color: @bg;
+    border:           1;
+    padding:          20;
+    width: 40%;
+}
+mainbox {
+    border:  0;
+    padding: 0;
+}
+message {
+    border:       1px dash 0px 0px ;
+    border-color: @se;
+    padding:      1px ;
+}
+textbox {
+    text-color: @fg;
+}
+listview {
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+    border-color: @se;
+    spacing:      2px ;
+    scrollbar:    true;
+    padding:      2px 0px 0px ;
+}
+element {
+    border:  0;
+    padding: 1px;
+    spacing: 0px;
+    size: 100px;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element.normal.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+element.normal.urgent {
+    background-color: @bbg;
+    text-color:       @fg;
+}
+element.normal.active {
+    background-color: @bbg;
+    text-color:       @fg;
+}
+element.selected.normal {
+    background-color: @bbg;
+    text-color:       @fg;
+}
+element.selected.urgent {
+    background-color: @bbg;
+    text-color:       @fg;
+}
+element.selected.active {
+    background-color: @bbg;
+    text-color:       @fg;
+}
+element.alternate.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+element.alternate.urgent {
+    background-color: @bbg;
+    text-color:       @fg;
+}
+element.alternate.active {
+    background-color: @bbg;
+    text-color:       @fg;
+}
+scrollbar {
+    width:        0px ;
+    border:       0;
+    handle-width: 0px ;
+    padding:      0;
+}
+mode-switcher {
+    border:       2px dash 0px 0px ;
+    border-color: @se;
+}
+button.selected {
+    background-color: @bg;
+    text-color:       @fg;
+}
+inputbar {
+    spacing:    0;
+    text-color: @fg;
+    padding:    1px ;
+}
+case-indicator {
+    spacing:    0;
+    text-color: @fg;
+}
+entry {
+    spacing:    0;
+    text-color: @fg;
+}
+prompt {
+    spacing:    0;
+    text-color: @fg;
+}
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @normal-foreground;
+}

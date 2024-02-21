@@ -1,5 +1,7 @@
 {
-  "layer": "top",
+    "layer": "top",
+    "output": "eDP-1",
+    "height": "100px",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/clock"],
     "modules-right": ["backlight", "pulseaudio", "battery"],
