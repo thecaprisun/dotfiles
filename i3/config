@@ -119,8 +119,8 @@ mode "resize" {
 # default_border pixel 3
 # default_floating_border pixel 3
 
-# gaps inner 10
-# gaps outer 20
+gaps inner 5
+gaps outer 10
 
 bindsym Mod1+Tab exec "rofi -show window"
 # bindsym $mod+e exec "rofi -show filebrowser"
@@ -130,17 +130,17 @@ bindsym $mod+r mode "resize"
 bindsym Print exec "flameshot gui"
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
 exec polybar
-
 exec compfy
+exec "setxkbmap -layout it"
 
 default_border pixel 0
 default_floating_border pixel 0
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #eb4034 #eb4034 #eb4034 #eb4034   #eb4034
-client.focused_inactive #c92c2c #c92c2c #c92c2c #c92c2c   #c92c2c
-client.unfocused        #c92c2c #c92c2c #c92c2c #c92c2c   #c92c2c
+
+client.focused          #ff25a8 #ff25a8 #ff25a8 #ff25a8   #ff25a8
+client.focused_inactive #b825a1 #b825a1 #b825a1 #b825a1   #b825a1
+client.unfocused        #b825a1 #b825a1 #b825a1 #b825a1   #b825a1
 client.urgent           #bd3737 #bd3737 #bd3737 #bd3737   #bd3737
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
