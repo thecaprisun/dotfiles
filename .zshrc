@@ -24,6 +24,7 @@ alias acm0="sudo chmod a+rw /dev/ttyACM0"
 alias p="sudo pacman"
 alias n="nvim"
 alias N="sudo nvim"
+alias dc="cd .."
 
 PROMPT='> '
 
