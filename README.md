@@ -1,57 +1,13 @@
-# Dotfiles
+## I3, Compfy, Polybar, Rofi, Alacritty
 
-This contains my dotfiles. They are for alacritty, i3, nvim, hyprland, waybar, dunst and tofi.
+![2024-02-11_14-30](https://github.com/thecaprisun/dotfiles/assets/156376854/cfb5fe62-1ba9-409a-85fc-a2de8831ee3a)
 
-## NVIM
-
-![image](https://github.com/thecaprisun/dotfiles/assets/156376854/5e2d8e49-6cbd-4d76-9892-6b2182e9e3f0)
-![image](https://github.com/thecaprisun/dotfiles/assets/156376854/143f8964-45d8-4bc8-bc96-f4f88e91da1f)
-
-This is my NVIM config. It's not finished yet, but i'm constantly working on this, so expect this to get a lot of edits.
-
-## Alacritty
-
-![image](https://github.com/thecaprisun/dotfiles/assets/156376854/045e9626-0e4a-464f-9759-c6334cb87876)
-
-My Alacritty config is nothing special, just sharing it here because I need a place to keep it. In the screenshot I'm using zsh with starship gruvbox rainbow.
-
-## i3
-
-![2024-02-11_14-30](https://github.com/thecaprisun/dotfiles/assets/156376854/bc5abbad-9a22-47fc-8503-13fdd0bc52b6)
-
-This is my i3 configuration. Daily driving it right now. Edits may be frequent.
-
-## Polybar
-
-![2024-02-11_14-30](https://github.com/thecaprisun/dotfiles/assets/156376854/c0bc0466-1fac-4091-ac9e-683080bc66b7)
-
-This is my polybar. I've made a flat look, with just 2 colors. Same as i3 though, don't expect frequent updates.
-
-## Waybar
-
-![image](https://github.com/thecaprisun/dotfiles/assets/156376854/e7106936-428d-45fa-a273-348aa7255f95)
-
-Waybar. Not using this often
-
-## Hyprland
+## Hyprland, Waybar, Tofi, Alacritty
 
 ![image](https://github.com/thecaprisun/dotfiles/assets/156376854/68f4ac73-b15d-4c05-a3b7-51d20f457ab4)
-
-Nothing special, Hyprland is relatively easy to configure compared to some other stuff here.
-
-## Tofi
-
 ![image](https://github.com/thecaprisun/dotfiles/assets/156376854/c8654db3-0a6b-49d9-90d6-194653a068d9)
 
-Might recive edits here and there
+## Neovim
 
-## Rofi
-
-![2024-02-11_14-30](https://github.com/thecaprisun/dotfiles/assets/156376854/e6c7806a-f60f-48d7-bffc-130c6a22181c)
-![2024-02-11_14-30](https://github.com/thecaprisun/dotfiles/assets/156376854/bacb3509-35f8-4b30-8f64-1785dada67d6)
-
-Edits won't be frequent, I might add  more modes.
-
-## Compfy
-
-It adds  blur and fancy animations.
+![2024-02-11_14-30](https://github.com/thecaprisun/dotfiles/assets/156376854/58b1bb41-2c72-4d40-b2f6-a1241b1275ab)
+![2024-02-11_14-30](https://github.com/thecaprisun/dotfiles/assets/156376854/e25e6965-bf74-4099-8c42-2fc0e52d63a0)
