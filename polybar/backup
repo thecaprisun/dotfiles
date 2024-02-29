@@ -1,0 +1,391 @@
+;==========================================================
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;==========================================================
+
+[colors]
+background = #1E1E28
+background-alt = #3D624F
+foreground = #FFFFFF
+primary = #FFFFFF
+secondary = #FFFFFF
+alert = #FF15A1
+# disabled = #707880
+
+[bar/example]
+width = 100%
+height = 20pt
+radius = 0
+
+; dpi = 96
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3pt
+
+border-size = 0pt
+border-color = #FFFFFF
+
+padding-left = 0
+padding-right = 1
+
+module-margin = 0
+
+separator =  
+separator-foreground = ${colors.disabled}
+
+; bottom = true
+
+font-0 = "FiraCode Nerd Font:size=10;2"
+
+modules-left = powermenu xworkspaces nothing wifi battery brightness pulseaudio
+modules-center = 
+modules-right = battery cpu memory drive date nothing
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+enable-ipc = true
+
+; wm-restack = generic
+; wm-restack = bspwm
+; wm-restack = i3
+
+; override-redirect = true
+
+[module/systray]
+type = internal/tray
+
+format-margin = 8pt
+
+[module/nothing]
+type = custom/text
+format = <label>
+
+format-background = ${colors.background}
+format-foreground = ${colors.background}
+format-padding = 1
+label = i  
+
+[module/xworkspaces]
+type = internal/xworkspaces
+
+label-active =    %name%  
+label-active-padding = 3 
+label-active-text = ${colors.alert}
+; label-active-background = ${colors.primary}
+; label-active-underline= ${colors.primary}
+
+label-occupied =  %name%
+; label-occupied-background = ${colors.alert}
+label-occupied-padding = 3
+
+label-urgent =  ( %name% )
+; label-urgent-background = ${colors.alert}
+label-urgent-padding = 3
+
+label-empty = %name%
+; label-empty-foreground = ${colors.disabled}
+label-empty-padding = 3
+
+[module/powermenu]
+type = custom/text
+; @deprecated Use format and/or label to define the module text
+; content = Some random label
+
+; Available tags:
+;   <label> (default)
+; New in version 3.7.0
+format = <label>
+format-background = background
+format-foreground = #fff
+format-padding = 1
+
+; No tokens available
+; New in version 3.7.0
+label = 
+
+; "click-(left|middle|right)" will be executed using "/bin/sh -c $COMMAND"
+click-left = rofi -show power-menu -modi power-menu:~/.config/rofi/rofi-power-menu/rofi-power-menu
+click-middle = 
+click-right =
+
+[module/firefox]
+type = custom/text
+; @deprecated Use format and/or label to define the module text
+; content = Some random label
+
+; Available tags:
+;   <label> (default)
+; New in version 3.7.0
+format = <label>
+format-background = #00
+format-foreground = #fff
+format-padding = 1
+
+; No tokens available
+; New in version 3.7.0
+label = 
+
+; "click-(left|middle|right)" will be executed using "/bin/sh -c $COMMAND"
+click-left = exec firefox
+click-middle = exec firefox
+click-right = exec firefox
+
+[module/code]
+type = custom/text
+; @deprecated Use format and/or label to define the module text
+; content = Some random label
+
+; Available tags:
+;   <label> (default)
+; New in version 3.7.0
+format = <label>
+format-background = #00
+format-foreground = #fff
+format-padding = 1
+
+; No tokens available
+; New in version 3.7.0
+label = 󰨞
+
+; "click-(left|middle|right)" will be executed using "/bin/sh -c $COMMAND"
+click-left = exec code
+click-middle = exec code
+click-right = exec code
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:60:...%
+
+[module/battery]
+type = internal/battery
+
+full-at = 100
+
+low-at = 20
+
+battery = BATT
+adapter = ACAD
+
+poll-interval = 5
+
+; see "man date" for details on how to format the time string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+; Default: %H:%M:%S
+time-format = %H:%M
+
+; Available tags:
+;   <label-charging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-charging>
+format-charging = <animation-charging> <label-charging>
+
+; Available tags:
+;   <label-discharging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
+
+; Available tags:
+;   <label-full> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;format-full = <ramp-capacity> <label-full>
+
+; Format used when battery level drops to low-at
+; If not defined, format-discharging is used instead.
+; Available tags:
+;   <label-low>
+;   <animation-low>
+;   <bar-capacity>
+;   <ramp-capacity>
+; New in version 3.6.0
+;format-low = <label-low> <animation-low>
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current charge rate in watts)
+label-charging =  󰂄 %percentage%%  
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current discharge rate in watts)
+label-discharging =  󰁹 %percentage%%  
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+label-full = 󰁹 %percentage%%  
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current discharge rate in watts)
+; New in version 3.6.0
+label-low =  󰂃 %percentage%%  
+
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+; Only applies if <bar-capacity> is used
+bar-capacity-width = 10
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+; Only applies if <animation-discharging> is used
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+; Framerate in milliseconds
+animation-discharging-framerate = 500
+
+; Only applies if <animation-low> is used
+; New in version 3.6.0
+animation-low-0 = 
+animation-low-1 = 
+animation-low-framerate = 200
+
+[module/backlight]
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+; Default: first usable card in /sys/class/backlight (new in version 3.7.0)
+card = amdgpu_bl1
+
+; Use the `/sys/class/backlight/.../actual-brightness` file
+; rather than the regular `brightness` file.
+; New in version 3.6.0
+; Changed in version: 3.7.0: Defaults to true also on amdgpu backlights
+; Default: true
+use-actual-brightness = true
+
+; Interval in seconds after which after which the current brightness is read
+; (even if no update is detected).
+; Use this as a fallback if brightness updates are not registering in polybar
+; (which happens if the use-actual-brightness is false).
+; There is no guarantee on the precisio of this timing.
+; Set to 0 to turn off
+; New in version 3.7.0
+; Default: 0 (5 if use-actual-brightness is false)
+poll-interval = 0
+
+; Enable changing the backlight with the scroll wheel
+; NOTE: This may require additional configuration on some systems. Polybar will
+; write to `/sys/class/backlight/${self.card}/brightness` which requires polybar
+; to have write access to that file.
+; DO NOT RUN POLYBAR AS ROOT. 
+; The recommended way is to add the user to the
+; `video` group and give that group write-privileges for the `brightness` file.
+; See the ArchWiki for more information:
+; https://wiki.archlinux.org/index.php/Backlight#ACPI
+; Default: false
+enable-scroll = true
+
+; Interval for changing the brightness (in percentage points).
+; New in version 3.7.0
+; Default: 5
+scroll-interval = 10
+
+; Available tags:
+;   <label> (default)
+;   <ramp>
+;   <bar>
+format = <label>
+
+; Available tokens:
+;   %percentage% (default)
+label = %percentage%%
+
+; Only applies if <ramp> is used
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+; Only applies if <bar> is used
+bar-width = 10
+bar-indicator = |
+bar-fill = ─
+bar-empty = ─
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume-prefix = " 󰕾 "
+format-volume-prefix-foreground = ${colors.secondary}
+format-volume = <label-volume>
+
+label-volume = %percentage%% 
+
+label-muted = 󰸈 
+label-muted-foreground = ${colors.secondary}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "  "
+format-prefix-foreground = ${colors.secondary}
+label = %percentage_used:2%% 
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "  "
+format-prefix-foreground = ${colors.secondary}
+label =%percentage:2%% 
+
+[network-base]
+type = internal/network
+interval = 5
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
+
+[module/wlan]
+inherit = network-base
+interface-type = wireless
+label-connected = %{F#F0C674}%ifname%%{F-} %essid% %local_ip%
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = %H:%M
+date-alt = %Y-%m-%d %H:%M:%S
+
+label = %date%
+label-foreground = ${colors.primary}
+
+[settings]
+screenchange-reload = true
+pseudo-transparency = true
+
+; vim:ft=dosini

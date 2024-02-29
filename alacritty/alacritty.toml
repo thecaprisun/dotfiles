@@ -3,15 +3,15 @@ size = 8
 
 [font.normal]
 family = "Terminess Nerd Font"
-style = "Regular"
+# style = "Regular"
 
 [window]
-opacity = 0.6
+opacity = 1
 # decorations="none"
 
-# [window.padding]
-# x = 10
-# y = 10
+[window.padding]
+x = 5
+y = 5
 
 [shell]
 program = "/usr/bin/zsh"

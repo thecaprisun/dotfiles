@@ -29,5 +29,7 @@ alias dc="cd .."
 PROMPT='> '
 
 EDITOR=nvim
-tmux
-# eval "$(starship init zsh)"
+# tmux
+eval "$(starship init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
