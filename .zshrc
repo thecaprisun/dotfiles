@@ -25,6 +25,7 @@ alias p="sudo pacman"
 alias n="nvim"
 alias N="sudo nvim"
 alias dc="cd .."
+alias fetch="nitch"
 
 PROMPT='> '
 
