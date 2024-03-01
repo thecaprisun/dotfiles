@@ -26,6 +26,8 @@ alias n="nvim"
 alias N="sudo nvim"
 alias dc="cd .."
 alias fetch="nitch"
+alias unfuck_keyboard="setxkbmap -layout it"
+alias unfuck_wifi="sudo systemctl restart networkmanager"
 
 PROMPT='> '
 

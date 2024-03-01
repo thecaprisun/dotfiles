@@ -128,3 +128,6 @@ textbox-prompt-colon {
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
+//@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+//@theme "/usr/share/rofi/themes/lb.rasi"
+@theme "/usr/share/rofi/themes/solarized.rasi"

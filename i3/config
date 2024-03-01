@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango: FiraCode Nerd Font 22
+font pango: FiraCode Nerd Font 10
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -21,6 +21,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 bindsym $mod+Return exec alacritty
+bindsym $mod+e exec nautilus
 
 bindsym $mod+Shift+q kill
 
@@ -54,7 +55,7 @@ bindsym $mod+f fullscreen toggle
 
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+e layout toggle split
 
 bindsym $mod+Shift+space floating toggle
 
