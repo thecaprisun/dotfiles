@@ -26,8 +26,6 @@ local plugins = {
    end, 
  },
 
- { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"} ,
-
  {
    "folke/noice.nvim",
    event = "VeryLazy",
@@ -56,7 +54,7 @@ local plugins = {
   'lewis6991/gitsigns.nvim', 
   'nvim-tree/nvim-web-devicons', 
   },
-  init = function() vim.g.barbar_auto_setup = false end,
+  init = function() vim.g.barbar_auto_setup = true end,
     version = '^1.0.0', 
  },
 
@@ -69,9 +67,6 @@ local plugins = {
       "3rd/image.nvim", 
     },
  },
-
- {"neoclide/coc.nvim", lazy = true },
-
 
  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
@@ -128,7 +123,7 @@ require("catppuccin").setup({
         gitsigns = true,
         -- nvimtree = true,
         neotree = true,
-        treesitter = true,
+        treesitter = false,
         notify = false,
         mini = {
             enabled = true,
@@ -161,8 +156,6 @@ require("ibl").setup()
 --require("coc.nvim").setup()
 
 require("alpha-config")
-require("treesitter-config")
-
 
 local ctp_feline = require('catppuccin.groups.integrations.feline')
 
