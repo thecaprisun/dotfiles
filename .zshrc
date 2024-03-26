@@ -36,3 +36,5 @@ EDITOR=nvim
 # eval "$(starship init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [ -e /home/sun/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sun/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

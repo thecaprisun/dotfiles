@@ -1,130 +1,131 @@
+// vim: fdm=marker
+
 configuration {
-  display-drun: "Applications";
-  display-window: "Windows";
-  drun-display-format: "{icon} {name}";
-  show-icons: true;
+  modes: "window,drun,run,ssh";
+  font: "JetBrainsMono NF 18";
+  drun-display-format: "{name}";
 }
-
-
 
 * {
-  bg: #11121D;
+  // general
+  bg: #a5ae83;
+  bgt: #28282895;
+  t: transparent;
+  fg: #517a74;
 
-  bbg: #1E1E28;
+  selected-bg: @fg;
+  selected-fg: @bg;
 
-  fg: #FFFFFF;
-
-  se: #11121D;
+  // for windows
+  active: #a9b665;
+  urgent: #fb4934;
 }
+
 window {
-    background-color: @bg;
-    border:           1;
-    padding:          20;
-    width: 40%;
+  fullscreen: true;
+  padding: 30% 30%;       // you might want to ajust these to resize rofi.
+  transparency: "real";
+  background-color: @bgt;
+  border-color: @t;
 }
-mainbox {
-    border:  0;
-    padding: 0;
+
+listview {
+  border: 0 0 0 0;
+  padding: 23 0 0;
+  scrollbar: false;
 }
-message {
-    border:       1px dash 0px 0px ;
-    border-color: @se;
-    padding:      1px ;
+
+scrollbar {
+    width:        4px;
+    border:       0;
+    handle-color: @fg;
+    handle-width: 8px;
+    padding:      0 5;
 }
+
+entry {
+    placeholder: "";
+}
+
+// less interesting stuff {{{
+
+// using elements from:
+// https://github.com/bardisty/gruvbox-rofi/blob/master/gruvbox-common.rasi
+
 textbox {
     text-color: @fg;
 }
-listview {
-    fixed-height: 0;
-    border:       2px dash 0px 0px ;
-    border-color: @se;
-    spacing:      2px ;
-    scrollbar:    true;
-    padding:      2px 0px 0px ;
-}
+
 element {
     border:  0;
-    padding: 1px;
-    spacing: 0px;
-    size: 100px;
-}
-element-text {
-    background-color: inherit;
-    text-color:       inherit;
+    padding: 2px;
 }
 element.normal.normal {
-    background-color: @bg;
+    background-color: @t;
     text-color:       @fg;
 }
 element.normal.urgent {
-    background-color: @bbg;
-    text-color:       @fg;
+    background-color: @t;
+    text-color:       @urgent;
 }
 element.normal.active {
-    background-color: @bbg;
-    text-color:       @fg;
+    background-color: @t;
+    text-color:       @active;
 }
 element.selected.normal {
-    background-color: @bbg;
-    text-color:       @fg;
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
 }
 element.selected.urgent {
-    background-color: @bbg;
-    text-color:       @fg;
+    background-color: @selected-bg;
+    text-color:       @urgent;
 }
 element.selected.active {
-    background-color: @bbg;
-    text-color:       @fg;
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
 }
 element.alternate.normal {
-    background-color: @bg;
+    background-color: @t;
     text-color:       @fg;
 }
 element.alternate.urgent {
-    background-color: @bbg;
-    text-color:       @fg;
+    background-color: @t;
+    text-color:       @urgent;
 }
 element.alternate.active {
-    background-color: @bbg;
-    text-color:       @fg;
+    background-color: @t;
+    text-color:       @active;
 }
-scrollbar {
-    width:        0px ;
-    border:       0;
-    handle-width: 0px ;
-    padding:      0;
+
+sidebar {
+    border:       2px 0 0;
+    border-color: @fg;
 }
-mode-switcher {
-    border:       2px dash 0px 0px ;
-    border-color: @se;
+
+inputbar {
+    spacing:    0;
+    text-color: @fg;
+    padding:    2px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
 }
+
+case-indicator,
+entry,
+prompt,
+button {
+    spacing:    0;
+    text-color: @fg;
+}
+
 button.selected {
     background-color: @bg;
     text-color:       @fg;
 }
-inputbar {
-    spacing:    0;
-    text-color: @fg;
-    padding:    1px ;
-}
-case-indicator {
-    spacing:    0;
-    text-color: @fg;
-}
-entry {
-    spacing:    0;
-    text-color: @fg;
-}
-prompt {
-    spacing:    0;
-    text-color: @fg;
-}
-inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
-}
-textbox-prompt-colon {
+
+textbox-prompt-sep {
     expand:     false;
     str:        ":";
-    margin:     0px 0.3em 0em 0em ;
-    text-color: @normal-foreground;
+    text-color: @fg;
+    margin:     0 0.3em 0 0;
 }
+// }}}
