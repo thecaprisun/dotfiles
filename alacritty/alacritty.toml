@@ -1,94 +1,42 @@
-[font]
-size = 16
+#   █████╗ ██╗      █████╗  ██████╗██████╗ ██╗████████╗████████╗██╗   ██╗
+#  ██╔══██╗██║     ██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚══██╔══╝╚██╗ ██╔╝
+#  ███████║██║     ███████║██║     ██████╔╝██║   ██║      ██║    ╚████╔╝ 
+#  ██╔══██║██║     ██╔══██║██║     ██╔══██╗██║   ██║      ██║     ╚██╔╝  
+#  ██║  ██║███████╗██║  ██║╚██████╗██║  ██║██║   ██║      ██║      ██║   
+#  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝   
+#	gh0stzk - https://github.com/gh0stzk/dotfiles
 
-[font.normal]
-family = "Terminess Nerd Font"
-# style = "Regular"
+import = ["~/.config/alacritty/rice-colors.toml", "~/.config/alacritty/fonts.toml"]
+
+live_config_reload = true
+
+[cursor]
+blink_interval = 550
+unfocused_hollow = false
+thickness = 0.15
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[selection]
+save_to_clipboard = true
 
 [window]
-opacity = 1
-# decorations="none"
+decorations = "none"
+dynamic_title = true
+opacity = 1.0
+dynamic_padding = true
 
 [window.padding]
-x = 5
-y = 5
+x = 15
+y = 15
 
-[shell]
-program = "/usr/bin/zsh"
+[scrolling]
+history = 10000
+multiplier = 3
 
-[colors.primary]
-background = "#1E1E2E"
-foreground = "#CAD3F5"
-dim_foreground = "#CAD3F5"
-bright_foreground = "#CAD3F5"
-
-[colors.cursor]
-text = "#24273A"
-cursor = "#F4DBD6"
-
-[colors.vi_mode_cursor]
-text = "#24273A"
-cursor = "#B7BDF8"
-
-[colors.search.matches]
-foreground = "#24273A"
-background = "#A5ADCB"
-
-[colors.search.focused_match]
-foreground = "#24273A"
-background = "#A6DA95"
-
-[colors.footer_bar]
-foreground = "#24273A"
-background = "#A5ADCB"
-
-[colors.hints.start]
-foreground = "#24273A"
-background = "#EED49F"
-
-[colors.hints.end]
-foreground = "#24273A"
-background = "#A5ADCB"
-
-[colors.selection]
-text = "#24273A"
-background = "#F4DBD6"
-
-[colors.normal]
-black = "#494D64"
-red = "#ED8796"
-green = "#A6DA95"
-yellow = "#EED49F"
-blue = "#8AADF4"
-magenta = "#F5BDE6"
-cyan = "#8BD5CA"
-white = "#B8C0E0"
-
-[colors.bright]
-black = "#5B6078"
-red = "#ED8796"
-green = "#A6DA95"
-yellow = "#EED49F"
-blue = "#8AADF4"
-magenta = "#F5BDE6"
-cyan = "#8BD5CA"
-white = "#A5ADCB"
-
-[colors.dim]
-black = "#494D64"
-red = "#ED8796"
-green = "#A6DA95"
-yellow = "#EED49F"
-blue = "#8AADF4"
-magenta = "#F5BDE6"
-cyan = "#8BD5CA"
-white = "#B8C0E0"
-
-[[colors.indexed_colors]]
-index = 16
-color = "#F5A97F"
-
-[[colors.indexed_colors]]
-index = 17
-color = "#F4DBD6"
-
+[bell]
+animation = "Linear"
+duration = 0
+command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/dialog-error.oga"] }
