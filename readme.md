@@ -52,11 +52,9 @@ cp -r ./config/* ~/.config/
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshot
 
-![Waybar](images/waybar.png)
-![Desktop with a terminal opening showing pfetch](images/pfetch.png)
-![Desktop showing the screenshot menu](images/screenshot.png)
+![image](image.png)
 
 ---
 
