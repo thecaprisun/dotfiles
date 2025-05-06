@@ -1,0 +1,86 @@
+* {
+    font-family: "JetBrains Mono Nerd Font";
+    font-size: 13px;
+}
+
+window#waybar {
+    margin: 20px; 
+    border: 2px solid #504945; 
+    background-color: #282828; 
+    color: #ffffff;
+}
+
+button {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    padding: 0 10px;
+    margin: 0;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: #ffffff;
+    margin: 0 2px;
+}
+
+#workspaces button.focused {
+    background-color: #689D6A;
+    color: #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #ff5555;
+    color: #ffffff;
+}
+
+#mode {
+    background-color: #44475a;
+    color: #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 12px;
+    background-color: transparent;
+    color: #ffffff;
+    margin: 0;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#window,
+#workspaces {
+    margin: 0 8px;
+}
+
+/* Remove margin from workspace edge if it's the first/last module */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+

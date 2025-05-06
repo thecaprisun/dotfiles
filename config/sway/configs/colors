@@ -1,0 +1,5 @@
+# window colors          border      background  text        indicator
+client.focused           #504945     #504945     #fbf1c7     #504945
+client.focused_inactive  #3c3836     #3c3836     #d5c4a1
+client.unfocused         #3c3836     #3c3836     #d5c4a1
+client.urgent            #665c54     #665c54     #665c54

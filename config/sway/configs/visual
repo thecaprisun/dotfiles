@@ -1,0 +1,28 @@
+# sway config (visuals) 
+
+# corners
+corner_radius 0
+
+# gaps
+gaps outer 15
+gaps inner 5
+
+# borders
+default_border pixel 3
+default_floating_border pixel 3
+for_window [class=".*"] border pixel 2 
+
+# blur 
+blur enable
+blur_xray disable
+blur_passes 1
+blur_radius 4
+blur_noise 0.12
+
+# shadows
+shadows enable
+shadow_blur_radius 15
+shadow_color #0000007F
+shadow_offset 3 3
+shadows_on_csd enable
+

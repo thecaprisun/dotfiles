@@ -1,0 +1,15 @@
+# sway config (main file)
+
+# needed
+include /etc/sway/config.d/*
+
+# scripts
+exec_always ~/.config/sway/scripts/*
+
+# startup programs
+exec_always "pkill -f 'python3? .+/swaymonad.py';  ~/.config/sway/.swaymonad/swaymonad.py"
+exec_always waypaper --restore
+exec_always mako
+
+# other configs
+include ~/.config/sway/configs/*

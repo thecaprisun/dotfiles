@@ -1,0 +1,16 @@
+# sway config (variables) 
+
+# programs
+set $term alacritty
+set $menu .config/rofi/launchers/type-4/launcher.sh 
+set $screen .config/rofi/applets/bin/screenshot.sh 
+set $screenie wayfreeze & PID=$!; sleep .1; grim -g "$(slurp)" - | wl-copy; kill $PID
+set $picker hyprpicker | wl-copy
+
+# input (replace with id from 'swaymsg -t get_inputs')
+input "1267:12581:ASUE1201:00_04F3:3125_Touchpad" { 
+        dwt enabled
+                tap enabled
+                middle_emulation enabled
+}
+
